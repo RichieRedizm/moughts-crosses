@@ -7,7 +7,7 @@ export const Square = ({ id, icon, handleSquareClick }) => {
     <div
       className='square'
       onClick={() => handleSquareClick(id)}
-      title={`square position ${id}`}>
+      title={`position ${id}`}>
       <span>{icon}</span>
     </div>
   );

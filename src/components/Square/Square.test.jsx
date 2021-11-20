@@ -13,14 +13,14 @@ describe('<Square>', () => {
   it('renders Square with title attribute', () => {
     const { queryByTitle } = render(<Square {...props} />);
 
-    expect(queryByTitle(/square position 1/i)).toBeInTheDocument();
-    expect(queryByTitle(/square position 1/i)).toHaveClass('square');
+    expect(queryByTitle(/position 1/i)).toBeInTheDocument();
+    expect(queryByTitle(/position 1/i)).toHaveClass('square');
   });
 
   it('calls handleSquareClick onClick event', () => {
     const { queryByTitle } = render(<Square {...props} />);
 
-    fireEvent.click(queryByTitle(/square position 1/i));
+    fireEvent.click(queryByTitle(/position 1/i));
     expect(props.handleSquareClick).toHaveBeenCalled();
   });
 });

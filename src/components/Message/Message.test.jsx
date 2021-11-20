@@ -8,7 +8,7 @@ describe('<Message>', () => {
     props = { type: 'foo', msgText: 'Bar' };
   });
 
-  it('renders message and type as class', () => {
+  it('renders message text and type as class', () => {
     const { getByText } = render(<Message {...props} />);
 
     expect(getByText(/Bar/i)).toBeInTheDocument();
