@@ -4,8 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
   color: white;
+}
+
+.app__info {
+  font-size: 0.75rem;
 }
 
 @media only screen and (min-width: 980px) {

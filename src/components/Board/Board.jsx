@@ -8,12 +8,12 @@ export const Board = () => {
   const { message, squares, handleSquareClick, handleReset } = usePlayGame();
 
   return (
-    <>
+    <div className='board'>
       {message && <Message {...message} />}
-      <button className='reset' onClick={handleReset}>
+      <button className='board__reset' onClick={handleReset}>
         Restart Game
       </button>
-      <div className='board'>
+      <div className='board__container'>
         {squares.map((square) => (
           <Square
             key={`square-${square.id}`}
@@ -22,6 +22,6 @@ export const Board = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };

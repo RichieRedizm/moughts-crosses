@@ -4,10 +4,8 @@ import './Square.css';
 
 export const Square = ({ id, icon, handleSquareClick }) => {
   return (
-    <div
-      className={`square position-${id}`}
-      onClick={() => handleSquareClick(id)}>
-      <span className={icon}>{icon}</span>
+    <div className='square' onClick={() => handleSquareClick(id)}>
+      <span>{icon}</span>
     </div>
   );
 };
