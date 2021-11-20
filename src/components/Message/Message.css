@@ -8,9 +8,9 @@
 }
 
 .message.win {
-  background: #00ffffcf;
+  background: #00ffff9d;
 }
 
 .message.warn {
-  background: #e1ff007c;
+  background: rgba(255, 221, 0, 0.752);
 }

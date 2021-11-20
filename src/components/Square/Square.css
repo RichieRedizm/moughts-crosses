@@ -5,10 +5,32 @@
   outline-offset: -5px;
   text-align: center;
   font-size: 5em;
-  line-height: 1.4em;
+  width: 100px;
+  height: 100px;
+}
+.square span {
+  height: 100%;
+  overflow: hidden;
+  display: block;
 }
 
 .square:hover {
   transition: outline-offset 0.3s;
   outline-offset: -14px;
+}
+
+@media only screen and (min-width: 980px) {
+  .square {
+    font-size: 7em;
+    min-width: 140px;
+    min-height: 140px;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .square {
+    font-size: 10em;
+    min-width: 200px;
+    min-height: 200px;
+  }
 }

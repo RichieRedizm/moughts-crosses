@@ -5,22 +5,21 @@ import { Square } from '../Square';
 import './Board.css';
 
 export const Board = () => {
-  const { winner, alert, squares, handleSquareClick } = usePlayGame();
+  const { message, squares, handleSquareClick } = usePlayGame();
 
   return (
-    <div className='board'>
-      {winner && (
-        <Message type='win' msgText={`${winner} has won the game!`}></Message>
-      )}
-      {alert && <Message type='warn' msgText={alert}></Message>}
-      {squares.map((square) => (
-        <Square
-          key={`square-${square.id}`}
-          id={square.id}
-          icon={square.icon}
-          handleSquareClick={handleSquareClick}
-        />
-      ))}
-    </div>
+    <>
+      {message && <Message {...message} />}
+      <button className='restart'>Restart Game</button>
+      <div className='board'>
+        {squares.map((square) => (
+          <Square
+            key={`square-${square.id}`}
+            {...square}
+            handleSquareClick={handleSquareClick}
+          />
+        ))}
+      </div>
+    </>
   );
 };
