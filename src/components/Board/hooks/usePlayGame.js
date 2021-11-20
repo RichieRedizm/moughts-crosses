@@ -76,9 +76,16 @@ export const usePlayGame = () => {
     [iconType, squares, message],
   );
 
+  const handleReset = () => {
+    setSquares(initializeSquares());
+    setIconType(Icons.CROSS);
+    SetMessage(null);
+  };
+
   return {
     message,
     squares,
     handleSquareClick,
+    handleReset,
   };
 };
