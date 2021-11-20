@@ -1,3 +1,14 @@
 .square {
+  transition: outline-offset 0.3s;
   outline: auto;
+  outline-width: 5px;
+  outline-offset: -5px;
+  text-align: center;
+  font-size: 5em;
+  line-height: 1.4em;
+}
+
+.square:hover {
+  transition: outline-offset 0.3s;
+  outline-offset: -14px;
 }

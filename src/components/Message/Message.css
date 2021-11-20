@@ -1,0 +1,16 @@
+.message {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding: 1em;
+  left: 0;
+  top: 0;
+}
+
+.message.win {
+  background: #00ffffcf;
+}
+
+.message.warn {
+  background: #e1ff007c;
+}
