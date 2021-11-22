@@ -8,7 +8,7 @@ export const Board = () => {
   const { message, squares, handleSquareClick, handleReset } = usePlayGame();
 
   return (
-    <div className='board'>
+    <div className='board' title='Game Board'>
       {message && <Message {...message} />}
       <button className='board__reset' onClick={handleReset}>
         Restart Game
